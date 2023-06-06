@@ -94,6 +94,8 @@ body {
       rgba(91, 91, 91, 0.447552) 34.11%,
       rgba(187, 186, 192, 0.26) 62.5%
    );
+   transition: 0.3s;
+   /* opacity: 1; */
    border-radius: 20px;
 }
 
@@ -119,10 +121,11 @@ body {
    background: rgba(224, 224, 224, 0.5);
    border-radius: 8px;
    visibility: hidden;
+   cursor: url("../assets/img/curs.png"), auto;
 }
 
 .g-item:hover .g-item__icon {
    visibility: visible;
    background: #e0e0e0;
-   cursor: pointer;
+   /* cursor: pointer; */
 }
