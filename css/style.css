@@ -64,7 +64,7 @@ body {
 .gallery {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: repeat(auto-fit, minmax(1fr, 370px));
+   grid-template-rows: repeat(auto-fit, minmax(370px, 1fr));
    /* grid-template-rows: auto; */
    gap: 30px;
 }
