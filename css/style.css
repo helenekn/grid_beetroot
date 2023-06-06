@@ -21,6 +21,7 @@ body {
 .main {
    max-width: var(--width-container);
    margin: 120px auto;
+   border-radius: 8px;
 }
 
 .section__title {
@@ -64,6 +65,7 @@ body {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(auto-fit, minmax(1fr, 370px));
+   /* grid-template-rows: auto; */
    gap: 30px;
 }
 
@@ -81,7 +83,7 @@ body {
 }
 
 .g-item::before {
-   content: url("../assets/icons/heart.png");
+   content: "";
    display: block;
    position: absolute;
    width: 100%;
@@ -99,14 +101,28 @@ body {
    visibility: hidden;
 }
 
-.g-item:hover::before {
-   content: url("../assets/icons/heart.png");
-   display: block;
-   position: absolut;
-   left: 20px;
-   top: 20px;
+.g-item__icons {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   position: absolute;
+   padding: 20px;
+   border-radius: 8px;
+}
+
+.g-item__icon {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    width: 40px;
    height: 40px;
-   background: #e0e0e0;
+   background: rgba(224, 224, 224, 0.5);
    border-radius: 8px;
+   visibility: hidden;
+}
+
+.g-item:hover .g-item__icon {
+   visibility: visible;
+   background: #e0e0e0;
+   cursor: pointer;
 }
